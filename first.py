@@ -197,7 +197,7 @@ if check_4:
     preds=lm_results.predict(X_test).dropna()
 
 
-    df=pd.read_csv('owid-co2-data.csv',parse_dates=['year'])
+    df_plus=pd.read_csv('owid-co2-data.csv',parse_dates=['year'])
 
     df_plus=df_plus[['population','year','country']]
     df_plus=df_plus.loc[df_plus['country']==country_name,['population','year','country']]
@@ -267,27 +267,7 @@ if check_4:
     plt.yticks(fontsize=25)
     st.pyplot(figure)
 
-    # figure=plt.figure(figsize=(10,10))
-    # train_plt=plt.plot(y_train.index, y_train.values,linewidth=4,
-    # color = 'r',label="Train")
-    # test_plt=plt.plot(y_test.index, y_test.values,linewidth=4,
-    # color = 'blue',label='Test')
-    # predict_plt=plt.scatter(y_test.index,lm_results.predict(X_test),s=100,
-    # color='green', alpha = 0.7,label='Predicted test data')
-    # forecast_plt=plt.scatter(Final.index,Final.values,s=100,
-    # color='black', alpha = 0.7,label='Forecast for 2020-2025')
-    # plt.legend(fontsize=20,loc='best',markerscale=3)
-    # plt.xlabel('Year', fontsize=30)
-    # plt.ylabel('CO$_2$, million tonnes',fontsize=30)
-    # plt.title("CO${_2}$ emissions",fontsize=35)
-    # plt.xticks(fontsize=25,rotation=75)
-    # plt.yticks(fontsize=25)
-    # plt.xlim(pd.Timestamp('2015-01-01'),pd.Timestamp('2025-01-01'))
-    # plt.ylim(min())
-    # st.pyplot(figure)
 
 
-# options = st.multiselect('What are your favorite colors',
-# ['Green', 'Yellow', 'Red', 'Blue'],['Yellow', 'Red'])
-#
-# st.write('You selected:', options)
+
+    
