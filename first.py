@@ -197,7 +197,7 @@ if check_4:
     preds=lm_results.predict(X_test).dropna()
 
 
-    df_plus=pd.read_csv('C:/Users/Administrator/Documents/GA_Work/Capstone/Links/1/co2-data-master/co2-data-master/owid-co2-data.csv')
+    df=pd.read_csv('owid-co2-data.csv',parse_dates=['year'])
 
     df_plus=df_plus[['population','year','country']]
     df_plus=df_plus.loc[df_plus['country']==country_name,['population','year','country']]
