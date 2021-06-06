@@ -42,7 +42,9 @@ with st.beta_expander("About"):
     st.image(image)
 
 
-df=pd.read_csv(r'C:\Users\Administrator\Documents\GA_Work\Capstone\Links\1\co2-data-master\co2-data-master\owid-co2-data.csv',parse_dates=['year'])
+# df=pd.read_csv(r'C:\Users\Administrator\Documents\GA_Work\Capstone\Links\1\co2-data-master\co2-data-master\owid-co2-data.csv',parse_dates=['year'])
+df=pd.read_csv('owid-co2-data.csv',parse_dates=['year'])
+
 
 continents=['Africa','Asia (excl. China & India)','EU-27','EU-28',
 'Europe','Europe (excl. EU-27)','Europe (excl. EU-28)',
