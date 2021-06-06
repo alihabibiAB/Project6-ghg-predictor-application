@@ -33,6 +33,8 @@ st.title("Greenhouse Gas Emission Predictor")
 
 with st.beta_expander("About"):
     st.write("""
+    This app:
+    
     * Visualizes emissions of greenhouse gases including carbon dioxide (CO$_2$),
      methane (CH$_4$), and nitrous oxide (N$_2$O) for all countries
     * Forecasts CO$_2$ emission of 16 countries leading the global economic output for 2020-2025.
@@ -266,8 +268,3 @@ if check_4:
     plt.xticks(fontsize=25,rotation=75)
     plt.yticks(fontsize=25)
     st.pyplot(figure)
-
-
-
-
-    
